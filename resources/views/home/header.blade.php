@@ -1,7 +1,7 @@
 <div>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand fs-3 fw-bold" href="#">E-Class</a>
+      <a class="navbar-brand fs-3 fw-bold" href="{{url('/redirect')}}">E-Class</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -38,8 +38,30 @@
               ><i class="fa-solid fa-book"></i> EBOOK</a
             >
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url('/my_learning')}}"
+              ><i class="fa-solid fa-book-open"></i> My Learning</a
+            >
+          </li>
         </ul>
-        <a href=""><img class="icon mx-2" src="/home/image/cart.png" alt=""></a>
+        {{-- <a href=""><img class="icon mx-2" src="/home/image/cart.png" alt=""></a> --}}
+        <a type="button" class="btn btn-outline-light position-relative mx-2" href="{{url('show_cart')}}">
+          {{-- <img class="icon" src="/home/image/cart.png" alt=""> --}}
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	        width="24px" height="24px" viewBox="0 0 40 36" style="enable-background:new 0 0 40 36;" xml:space="preserve">
+          <g id="Page-1_4_" sketch:type="MSPage">
+	        <g id="Desktop_4_" transform="translate(-84.000000, -410.000000)" sketch:type="MSArtboardGroup">
+		      <path id="Cart" sketch:type="MSShapeGroup" class="st0" d="M94.5,434.6h24.8l4.7-15.7H92.2l-1.3-8.9H84v4.8h3.1l3.7,27.8h0.1
+			    c0,1.9,1.8,3.4,3.9,3.4c2.2,0,3.9-1.5,3.9-3.4h12.8c0,1.9,1.8,3.4,3.9,3.4c2.2,0,3.9-1.5,3.9-3.4h1.7v-3.9l-25.8-0.1L94.5,434.6"
+			    />
+	        </g>
+          </g>
+          </svg>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            {{$carts}}
+          </span>
+        </a>
+        
         <form class="d-flex" role="search">
           <input
             class="form-control me-2"

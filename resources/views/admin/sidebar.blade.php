@@ -27,7 +27,7 @@
       <a href="" class="text-decoration-none text-start text-light btn btn-dark mt-2" ><i class="fa-solid fa-cloud-arrow-up"></i> Upload Course</a>
   </div>
   <div class="d-grid gap-2">
-      <a href="" class="text-decoration-none text-start text-light btn btn-dark mt-2" ><i class="fa-solid fa-user"></i> Student</a>
+      <a href="{{url('enroll_request')}}" class="text-decoration-none text-start text-light btn btn-dark mt-2" ><i class="fa-solid fa-user"></i> Enroll Request</a>
   </div>
   <div class="d-grid gap-2">
       <a href="" class="text-decoration-none text-start text-light btn btn-dark mt-2" ><i class="fa-solid fa-store"></i> View Courses</a>

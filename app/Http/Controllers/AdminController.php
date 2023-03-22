@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Course;
 use App\Models\Video;
+use App\Models\Enroll;
 
 class AdminController extends Controller
 {
@@ -152,6 +153,31 @@ class AdminController extends Controller
         $video->save();
         return redirect()->back()->with('message','Video Upload Successfully');
     }
-    // adding course in cart
+    // admin Enroll request
+    public function enroll_request()
+    {
+        $data=enroll::all();
+
+        return view('admin.student_enroll_request',compact('data'));
+    }
+    // approve enroll request
+    public function approve_request($id)
+    {
+        $enroll=enroll::find($id);
+        // dd($enroll);
+        $enroll->payment_status=1;
+        $enroll->delivery_status=1;
+        $enroll->save();
+        return redirect()->back()->with('message','Enroll Request Approve Successfully');
+
+    }
+
+    // delete enroll request
+    public function delete_request($id)
+    {
+        $data=enroll::find($id);
+        $data->delete();
+        return redirect()->back()->with('message','Enroll Request Remove Successfully');
+    }
     
 }

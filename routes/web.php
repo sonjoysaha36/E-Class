@@ -43,5 +43,26 @@ route::post('/upload_course_video',[AdminController::class,'upload_course_video'
 // upload video
 
 route::get('/show_course',[AdminController::class,'show_course']);
-
+// add cart
 route::get('/add_cart/{id}',[HomeController::class,'add_cart']);
+// show cart
+route::get('/show_cart',[HomeController::class,'show_cart']);
+
+// remove cart
+route::get('/remove_cart/{id}',[HomeController::class,'remove_cart']);
+// enroll course
+route::get('/enroll_course/{id}',[HomeController::class,'enroll_course']);
+
+
+// admin enroll request
+route::get('/enroll_request',[AdminController::class,'enroll_request']);
+// approve enroll request
+route::get('/approve_request/{id}',[AdminController::class,'approve_request']);
+
+// delete request
+route::get('/delete_request/{id}',[AdminController::class,'delete_request']);
+
+// my learning
+route::get('/my_learning',[HomeController::class,'my_learning']);
+// playlist
+route::get('/playlist/{id}',[HomeController::class,'playlist']);

@@ -19,6 +19,11 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="home/css/style.css">
+    <style>
+      #Cart{
+      fill:green;
+      }
+    </style>
   </head>
   <body>
     {{-- first nav bar --}}
